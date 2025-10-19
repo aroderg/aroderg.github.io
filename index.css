@@ -35,10 +35,6 @@ div.mainPageLink {
     text-align: center;
     }
 
-a.toMain1 {
-    color: #ffffff;
-    }
-
 .column {
   float: left;
   width: 50%;
@@ -54,7 +50,11 @@ a.toMain1 {
   float: right;
   margin-top: 0px;
   font-family: 'Afacad Flux', monospace;
-  margin-top: 90px;
+  margin-top: 90px
+}
+
+a.descTitle {
+  color: #ffffff
 }
 
 .descParagraph {
