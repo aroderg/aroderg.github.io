@@ -6,14 +6,14 @@
         <title>aroderg.github.io</title>
     </head>
     <body>
-        <h1 class="aboutMeTitle">This is like the intro</h1>
-        <p class="aboutMeDesc">Hi, so I am aroderg - a dragon who likes coding, idle games, FPS games, and repeating all that from step 1.</p>
-        <p class="aboutMeDesc">I use Lua and (sometimes) Python for most of my projects. The type of apps I make are games (and sorta libraries I guess?)</p>
-        <h2 class="bestGame">(Subjectively) The best game ever: NoxTD</p>
+        <h1 class="aboutMeTitle">This is my intro isn't it?</h1>
+        <p class="aboutMeDesc">Hi, I'm aroderg, a dragon who was given a keyboard and internet early into childhood. I ended up liking coding, FPS, idle games, and Minecraft. <sub>(that's fun.)</sub></p>
+        <p class="aboutMeDesc">I use Lua and (sometimes) Python for my projects. The types of apps I make are games (and sorta libraries I guess?)</p>
+        <h2 class="bestGame">(Subjectively) The best game ever: NoxTD.<br>You can join our Discord <a href="/discord.html">right here</a>.</p>
 
     <div class="row">
         <div class="column">
-            <img src="imagem/NoxTD demo.png" alt="NoxTD Screenshot" style="max-height:480px; margin-top:90px">
+            <img src="imagem/NoxTD demo.png" alt="NoxTD Screenshot" style="max-height:480px; margin-top:90px; border: 4px solid #3d01b5">
         </div>
         <div class="column">
             <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/Nox-Tower-Defense">Nox Tower Defense</a></h1>
@@ -23,17 +23,17 @@
     </div>
     <div class="row">
         <div class="column">
-            <img src="imagem/PJ-CD demo.png" alt="Project: Cooldown Screenshot" style="max-height:480px; margin-top:90px">
+            <img src="imagem/PJ-CD demo.png" alt="Project: Cooldown Screenshot" style="max-height:480px; margin-top:90px; border: 4px solid #79043f">
         </div>
         <div class="column">
             <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/Project-Cooldown">Project: Cooldown</a></h1>
             <p class="descParagraph">Project Cooldown is an idle / incremental game in Lua (using LOVE2D) that takes inspiration from Check Back (by Demonin) and its mods. You tap, wait, unlock modifiers, and build up power over time — even when you're not actively playing — so your progress hums along in the background.</p>
-            <p class="descParagraph"><br>Updated Aug 2025</p>
+            <p class="descParagraph"><br>Updated Nov 2025</p>
         </div>
     </div>
     <div class="row">
         <div class="column">
-            <img src="imagem/NoxOS demo.png" alt="NoxOS Screenshot" style="max-height:480px; margin-top:90px">
+            <img src="imagem/NoxOS demo.png" alt="NoxOS Screenshot" style="max-height:480px; margin-top:90px; border: 4px solid #4285ca">
         </div>
         <div class="column">
             <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/NoxOS">NoxOS</a></h1>
@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         <div class="column">
-            <img src="imagem/dataIncremental demo.png" alt="Data Incremental Screenshot" style="max-height:480px; margin-top:90px">
+            <img src="imagem/dataIncremental demo.png" alt="Data Incremental Screenshot" style="max-height:480px; margin-top:90px; border: 4px solid #000">
         </div>
         <div class="column">
             <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/Data-Incremental">Data Incremental</a></h1>
@@ -51,5 +51,13 @@
             <p class="descParagraph"><br>Updated Oct 2023</p>
         </div>
     </div>
+
+    <script>
+        function get_random(list){
+            return list[Math.floor((Math.random()*list.length))];
+        }
+        var possibleTitles = Array("My Github page", "aroderg's stuff.", "Treme, treme, treme com potência", "insert flavor", "aroderg.github.io", "guys, one tower is enough", "esne paratusss???", ":3 mrow~")
+        document.title = get_random(possibleTitles);
+    </script>
     </body>
 </html>

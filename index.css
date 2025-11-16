@@ -12,7 +12,6 @@ body {
 p.aboutMeDesc {
     color: #ffffff;
     font-family: 'Courier New', monospace;
-    text-align: center;
     font-size:22px
     }
 
@@ -26,8 +25,8 @@ h2.bestGame {
 h1.aboutMeTitle {
     background-color: #ffffff;
     text-align: center;
-    margin-left: 790px;
-    margin-right: 790px;
+    margin-left: 740px;
+    margin-right: 740px;
     }
 
 div.mainPageLink {
