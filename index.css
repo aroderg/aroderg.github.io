@@ -5,6 +5,7 @@
 body {
     background-color: #df571a;
     background: url(imagem/background_nova.png) no-repeat center center fixed;
+    background-size: cover;
     backdrop-filter: blur(0px);
     background-repeat: no-repeat;
 }
@@ -52,7 +53,7 @@ div.mainPageLink {
     float: right;
     font-family: 'Afacad Flux', monospace;
     margin-top: 39px;
-    font-size: 48px
+    font-size: clamp(24px, 8vw, 48px);
 }
 
 a.descTitle {
@@ -96,7 +97,9 @@ a.descTitle {
 
 div.transCycle {
     background-size: 160%, 100%;
-    margin-top: -10px; height: 3px; margin-left: 720px; margin-right: 720px;
+    width: 480px;
+    margin: auto;
+    margin-top: -10px; height: 4px;
     background-image: linear-gradient(
         to right,
         #5bcefa 0%, #5bcefa 12.5%,
@@ -113,7 +116,9 @@ div.transCycle {
 
 div.enbyCycle {
     background-size: 200%, 100%;
-    margin-top: 2px; height: 3px; margin-left: 720px; margin-right: 720px;
+    width: 480px;
+    margin: auto;
+    margin-top: 4px; height: 4px;
     background-image: linear-gradient(
         to right,
         #fff433 0%, #fff433 12.5%,
@@ -131,7 +136,9 @@ div.enbyCycle {
 
 div.demigirlCycle {
     background-size: 83.333%, 100%;
-    margin-top: 2px; height: 3px; margin-left: 720px; margin-right: 720px;
+    width: 480px;
+    margin: auto;
+    margin-top: 4px; height: 4px;
     background-image: linear-gradient(
         to right,
         #7f7f7f 0%, #7f7f7f 16.667%,
