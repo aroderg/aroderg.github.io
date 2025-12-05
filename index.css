@@ -4,8 +4,12 @@
 
 body {
     background-color: #df571a;
-    background: url(imagem/background_nova.png) no-repeat center center fixed;
+    background-image: url(imagem/background_nova.png);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
     backdrop-filter: blur(0px);
     background-repeat: no-repeat;
 }
