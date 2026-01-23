@@ -4,7 +4,7 @@
 
 body {
     background-color: #000000;
-    background-image: url(imagem/background_nova.png);
+    background-image: url(asset/background_nova.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,86 +72,4 @@ a.descTitle {
     text-align:left;
     color: #fff;
     font-size: 24px;
-}
-
-@keyframes cycle-transgradient {
-    0% {
-        background-position: 0%, 50%
-    }
-    100% {
-        background-position: 133.333%, 50%
-    }
-}
-@keyframes cycle-enbygradient {
-    0% {
-        background-position: 0%, 50%
-    }
-    100% {
-        background-position: 100%, 50%
-    }
-}
-@keyframes cycle-demigirlgradient {
-    0% {
-        background-position: 0%, 50%
-    }
-    100% {
-        background-position: 500%, 50%
-    }
-}
-
-div.transCycle {
-    background-size: 160%, 100%;
-    width: 480px;
-    margin: auto;
-    margin-top: -10px; height: 4px;
-    background-image: linear-gradient(
-        to right,
-        #5bcefa 0%, #5bcefa 12.5%,
-        #ffc0cb 12.5%, #ffc0cb 25%,
-        #ffffff 25%, #ffffff 37.5%,
-        #ffc0cb 37.5%, #ffc0cb 50%,
-        #5bcefa 50%, #5bcefa 62.5%,
-
-        #ffc0cb 62.5%, #ffc0cb 75%,
-        #ffffff 75%, #ffffff 87.5%,
-        #ffc0cb 87.5%, #ffc0cb 100%);
-    animation: cycle-transgradient 6s infinite linear
-}
-
-div.enbyCycle {
-    background-size: 200%, 100%;
-    width: 480px;
-    margin: auto;
-    margin-top: 4px; height: 4px;
-    background-image: linear-gradient(
-        to right,
-        #fff433 0%, #fff433 12.5%,
-        #ffffff 12.5%, #ffffff 25%,
-        #9b59d0 25%, #9b59d0 37.5%,
-        #000000 37.5%, #000000 50%,
-
-        #fff433 50%, #fff433 62.5%,
-        #ffffff 62.5%, #ffffff 75%,
-        #9b59d0 75%, #9b59d0 87.5%,
-        #000000 87.5%, #000000 100%
-        );
-    animation: cycle-enbygradient 6s infinite reverse linear
-}
-
-div.demigirlCycle {
-    background-size: 83.333%, 100%;
-    width: 480px;
-    margin: auto;
-    margin-top: 4px; height: 4px;
-    background-image: linear-gradient(
-        to right,
-        #7f7f7f 0%, #7f7f7f 16.667%,
-        #c4c4c4 16.667%, #c4c4c4 33.333%,
-        #fdadc8 33.333%, #fdadc8 50%,
-        #ffffff 50%, #ffffff 66.667%,
-
-        #fdadc8 66.667%, #fdadc8 83.333%,
-        #c4c4c4 83.333%, #c4c4c4 100%
-        );
-    animation: cycle-demigirlgradient 6s infinite reverse linear
 }
