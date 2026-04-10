@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -12,13 +14,16 @@ body {
     background-attachment: fixed;
     backdrop-filter: blur(0px);
     background-repeat: no-repeat;
+    font-family: "Afacad Flux";
 }
+
 
 p.aboutMeDesc {
     color: #ffffff;
     font-family: 'Afacad Flux', monospace;
-    margin-top: -28px;
-    font-size:28px
+    font-size:28px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 h2.bestGame {
@@ -58,6 +63,8 @@ div.mainPageLink {
     font-family: 'Afacad Flux', monospace;
     margin-top: 39px;
     font-size: clamp(24px, 8vw, 48px);
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 a.descTitle {
@@ -67,7 +74,7 @@ a.descTitle {
 .descParagraph {
     float: left;
     margin-top: -12px;
-    margin-left: 16px;
+    margin-right: 24px;
     font-family: 'Afacad Flux', monospace;
     text-align:left;
     color: #fff;
