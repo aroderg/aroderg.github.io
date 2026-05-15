@@ -10,7 +10,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
     background-attachment: fixed;
     backdrop-filter: blur(0px);
     background-repeat: no-repeat;
@@ -31,7 +30,7 @@ h2.bestGame {
     font-family: 'Afacad Flux', monospace;
     text-align: center;
     margin-bottom: 90px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 h1.aboutMeTitle {
