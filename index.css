@@ -1,82 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #000000;
-    background-image: url(asset/background_nova.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    backdrop-filter: blur(0px);
-    background-repeat: no-repeat;
-    font-family: "Afacad Flux";
-}
-
-
-p.aboutMeDesc {
-    color: #ffffff;
-    font-family: 'Afacad Flux', monospace;
-    font-size:28px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-h2.bestGame {
-    color: #ffffff;
-    font-family: 'Afacad Flux', monospace;
-    text-align: center;
-    margin-bottom: 90px;
-    margin-top: 50px;
-}
-
-h1.aboutMeTitle {
-    color: #fff;
-    font-size: 48px;
-    margin-top: -8px;
-    text-align: center;
-}
-
-div.mainPageLink {
-    color: #ffffff;
-    text-align: center;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-    text-align:center
-}
-
-.row {
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
 }
 
-.descTitle {
-    float: right;
-    font-family: 'Afacad Flux', monospace;
-    margin-top: 39px;
-    font-size: clamp(24px, 8vw, 48px);
-    margin-left: 24px;
-    margin-right: 24px;
+#app {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
 }
 
-a.descTitle {
-    color: #ffffff
+.about-me-name {
+    font-family: "Afacad Flux", monospace;
+    font-size: 52px;
+    font-weight: 700;
+    color: #d478ff
 }
 
-.descParagraph {
-    float: left;
-    margin-top: -12px;
-    margin-right: 24px;
-    font-family: 'Afacad Flux', monospace;
-    text-align:left;
-    color: #fff;
+#about-me-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+    gap: 4vw;
+}
+
+#left-about-me {
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    height: auto;
+    width: 42vw;
+    padding: 1vw;
+}
+
+#right-about-me {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    height: auto;
+    width: 42vw;
+    padding: 1vw;
+    justify-content: flex-start;
+}
+
+.about-me-description {
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
     font-size: 24px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+#contact-bar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0px 10px 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+.contacts-button {
+    /*
+    border-radius: 6px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    */
+    width: auto;
+    height: auto;
+    padding: 0px 10px 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 24px;
+    font-weight: 450;
 }
