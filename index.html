@@ -1,63 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="index.css">
-        <title>aroderg.github.io</title>
-        <meta name="google-site-verification" content="PfDhr2lCakthLvQaey_-54RxNdchAmBrq1a5jkdDxiU" />
-    </head>
-    <body>
-    <h1 class="aboutMeTitle">This is my intro isn't it?</h1>
-    <p class="aboutMeDesc" style="margin-top:40px">Hi, I'm aroderg, a dragon who was given a keyboard and internet early into childhood. I ended up liking coding, FPS, idle games, and Minecraft (it's fun).<br>I use Lua and (sometimes) Python for my projects. I enjoy making endless-loop idle games that keep you feeling like you're really grinding out portions of progress; not that they're particularly hard, more like how much the process feels like a journey and not just a game.</p>
-    <h2 class="bestGame">(Subjectively) The best game ever: NoxTD.</h2>
-    <h1 class="aboutMeTitle" style="margin-top:-40px">Projects I main (or used to):</h1>
-    <div class="row">
-        <div class="column">
-            <img src="asset/NoxTD demo.avif" alt="NoxTD Screenshot" style="width: 45vw; margin-top:40px; border: 4px solid #3d01b5; text-align: center">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="PfDhr2lCakthLvQaey_-54RxNdchAmBrq1a5jkdDxiU" />
+    <title>about me!!</title>
+</head>
+<body>
+    <div id="app">
+        <p class="about-me-name" style="margin-top: 0px">aroderg</p>
+        <div id="about-me-boxes">
+            <div id="left-about-me">
+                <p class="about-me-description">Hi, I'm aroderg, a dragon who was given a keyboard and internet early into childhood. I ended up liking coding, FPS, idle games, and Minecraft. I use Lua, HTML+CSS+JS, and (sometimes) Python for my projects. I specialize in endless-loop idle games that turn your grind into a journey. Welcome to my little corner (if you plan on staying here, that is)!</p>
+            </div>
+            <div id="right-about-me">
+                <p class="about-me-description" style="line-height: 160%">OS: Kubuntu 24.04<br>Main Languages: Lua, HTML+CSS+JS<br>Game Genre: Idle / Incremental<br>Tools: VSCode, Git<br>Current hyperfixation: Hypixel SkyBlock</p>
+            </div>
         </div>
-        <div class="column">
-            <h1 class="descTitle"><a class="descTitle" style="margin-top:-10px"href="https://github.com/Another-Soul/Nox-Tower-Defense">Nox Tower Defense</a></h1>
-            <p class="descParagraph">A semi-idle twist on tower defense where your entire strategy hinges on just one tower. You invest in upgrades, unlock abilities, and evolve your lone defense strong enough to survive waves of enemies — all while passive income and idle mechanics ease the grind. Built in Lua using the LOVE2d framework.</p>
-            <p class="descParagraph"><br><b>Updated Nov 2025</b></a></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <img src="asset/PJ-CD demo.avif" alt="Project: Cooldown Screenshot" style="width: 45vw; margin-top:90px; border: 4px solid #79043f">
-        </div>
-        <div class="column">
-            <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/Project-Cooldown">Project: Cooldown</a></h1>
-            <p class="descParagraph">Project Cooldown is an idle / incremental game in Lua (using LOVE2D) that takes inspiration from Check Back (by Demonin) and its mods. You tap, wait, unlock modifiers, and build up power over time — even when you're not actively playing — so your progress hums along in the background.</p>
-            <p class="descParagraph"><br><b>Updated Nov 2025</b></p>
+        <div id="contact-bar">
+            <a href="https://github.com/aroderg" class="contacts-button">[ GitHub ]</a>
+            <a href="/projects.html" class="contacts-button">[ Projects ]</a>
+            <a href="/contacts.html" class="contacts-button">[ Contacts ]</a>
         </div>
     </div>
-    <div class="row">
-        <div class="column">
-            <img src="asset/NoxOS demo.avif" alt="NoxOS Screenshot" style="width: 45vw; margin-top:90px; border: 4px solid #4285ca">
-        </div>
-        <div class="column">
-            <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/NoxOS">NoxOS</a></h1>
-            <p class="descParagraph">NoxOS is a meta / simulation game about evolving an operating system through versions. There are 32 possible OS versions (5 developed, 27 not yet) and currently 15 game releases (8 considered stable). The latest stable version is v0.3.2 (released June 27, 2024). It's heavily inspired by Progressbar95.</p>
-            <p class="descParagraph"><br><b>Updated Sep 2024</b></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <img src="asset/dataIncremental demo.avif" alt="Data Incremental Screenshot" style="width: 45vw; margin-top:90px; border: 4px solid #444">
-        </div>
-        <div class="column">
-            <h1 class="descTitle"><a class="descTitle" href="https://github.com/Another-Soul/Data-Incremental">Data Incremental</a></h1>
-            <p class="descParagraph">Data Incremental is a Lua + LOVE-engine idle/strategy game where your goal is to accumulate data and unlock ever more advanced technologies as you climb through orders of magnitude. You start small, storing bits and bytes, and gradually master systems like multiprocessing, efficiency upgrades, data cascades, binary encoding, etc., eventually pushing your empire of information toward absurd scale.</p>
-            <p class="descParagraph"><br><b>Updated Oct 2023</b></p>
-        </div>
-    </div>
-
-    <script>
-        function get_random(list){
-            return list[Math.floor((Math.random()*list.length))];
-        }
-        var possibleTitles = Array("My Github page", "aroderg's stuff.", "Treme, treme, treme com potência", "insert flavor", "aroderg.github.io", "guys, one tower is enough", "esne paratusss???", ":3 mrow~", "do NOT insert flavor", "is aroderg cute? you decide!", "a", "to be fair i am not good at these", "dragons 🧡");
-        document.title = get_random(possibleTitles)
-    </script>
-    </body>
+</body>
 </html>
