@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    background-image: url(asset/background_pixel.png);
+    background-image: url(asset/background_pixel.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +29,7 @@ body {
     }
     100% {
         /* Moving exactly 100% of the pattern width creates the seamless loop */
-        background-position: 300% center;
+        background-position: 400% center;
     }
 }
 
@@ -59,7 +59,7 @@ p.about-me-name {
         #9B4F96,
         #0038A8
         );
-    background-size: 300% auto;
+    background-size: 400% auto;
     animation: name-gradient 48s infinite linear;
     -webkit-background-clip: text;
     background-clip: text;
@@ -141,4 +141,10 @@ p.about-me-name {
     font-family: "Afacad Flux", monospace;
     font-size: 24px;
     font-weight: 450;
+    transition-duration: 350ms;
+}
+
+.contacts-button:hover {
+    color: #da80ff;
+    font-size: 27px;
 }
