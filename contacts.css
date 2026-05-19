@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    background-image: url(asset/background_pixel.avif);
+    background-image: url(asset/background_marine.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,65 +66,14 @@ p.about-me-name {
     color: transparent;
 }
 
-#about-me-boxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: left;
-    gap: 4vw;
-}
-
-#left-about-me {
+#all-contacts-container {
     display: flex;
     flex-direction: column;
-    border-radius: 0px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 4px;
-    height: auto;
-    width: 42vw;
-    padding: 1vw;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
-}
-
-#right-about-me {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 4px;
-    height: auto;
-    width: 42vw;
-    padding: 1vw;
-    justify-content: flex-start;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
-}
-
-.about-me-description {
-    color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 24px;
-    font-weight: 400;
-    margin: 0px;
-}
-
-#contact-bar {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     width: auto;
     height: auto;
-    padding: 0px 10px 0px 10px;
-    color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 80px;
+    gap: 5vh;
 }
 
 .contacts-button {
@@ -139,13 +88,13 @@ p.about-me-name {
     padding: 0px 10px 0px 10px;
     color: #ffffff;
     font-family: "Afacad Flux", monospace;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 450;
     transition-duration: 350ms;
 }
 
 .contacts-button:hover {
-    color: #da80ff;
-    font-size: 27px;
+    color: #8988ff;
+    font-size: 39px;
     font-weight: 750;
 }
