@@ -149,3 +149,13 @@ p.about-me-name {
     font-size: 27px;
     font-weight: 750;
 }
+
+#xeyes {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    width: auto;
+    justify-content: center;
+    align-self: center;
+}
