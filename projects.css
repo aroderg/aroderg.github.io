@@ -11,71 +11,230 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    backdrop-filter: blur(0px);
-    background-repeat: no-repeat;
-    font-family: "Afacad Flux";
-}
-
-
-p.aboutMeDesc {
-    color: #ffffff;
-    font-family: 'Afacad Flux', monospace;
-    font-size:28px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-h2.bestGame {
-    color: #ffffff;
-    font-family: 'Afacad Flux', monospace;
-    text-align: center;
-    margin-bottom: 90px;
-    margin-top: 0px;
-}
-
-h1.aboutMeTitle {
-    color: #fff;
-    font-size: 48px;
-    margin-top: -8px;
-    text-align: center;
-}
-
-div.mainPageLink {
-    color: #ffffff;
-    text-align: center;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-    text-align:center
-}
-
-.row {
+    margin: 0;
+    padding: 20px 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Afacad Flux", monospace;
 }
 
-.descTitle {
-    float: right;
-    font-family: 'Afacad Flux', monospace;
-    margin-top: 39px;
-    font-size: clamp(24px, 8vw, 48px);
-    margin-left: 24px;
-    margin-right: 24px;
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-a.descTitle {
-    color: #ffffff
+@keyframes name-gradient {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        /* Moving exactly 100% of the pattern width creates the seamless loop */
+        background-position: 400% center;
+    }
 }
 
-.descParagraph {
-    float: left;
-    margin-top: -12px;
-    margin-right: 24px;
-    font-family: 'Afacad Flux', monospace;
-    text-align:left;
-    color: #fff;
+#name-container {
+    margin: 1vw 0vw 2vw 0vw;
+    background-color: #00000080;
+    backdrop-filter: blur(2px);
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-me-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Afacad Flux", monospace;
+    font-size: 52px;
+    font-weight: 700;
+    background-image: linear-gradient(
+    to right,
+        #0057b7,
+        #8d00ff,
+        #0057b7
+    );
+    background-size: 400% auto;
+    animation: name-gradient 24s infinite linear;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.intro-box {
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 4px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #00000080;
+    backdrop-filter: blur(2px);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.intro-text {
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+.best-game-highlight {
+    color: #da80ff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 4px;
+    background-color: #00000080;
+    backdrop-filter: blur(2px);
+    padding: 25px;
+    gap: 30px;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-noxtd { border-color: #3d01b5; }
+.card-cooldown { border-color: #79043f; }
+.card-noxos { border-color: #4285ca; }
+.card-dataincremental { border-color: #444444; }
+
+.project-image-container {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-width: 4px;
+    display: block;
+}
+
+.border-noxtd { border-color: #3d01b5; }
+.border-cooldown { border-color: #79043f; }
+.border-noxos { border-color: #4285ca; }
+.border-dataincremental { border-color: #444444; }
+
+.project-info {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-name-link {
+    font-family: "Afacad Flux", monospace;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    display: inline-block;
+    transition: color 350ms ease, transform 350ms ease;
+}
+
+.project-name-link:hover {
+    color: #da80ff;
+    transform: scale(1.02);
+}
+
+.project-description {
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.project-update {
+    color: #da80ff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
     font-size: 24px;
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.nav-button {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    padding: 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 24px;
+    font-weight: 450;
+    transition-duration: 350ms;
+}
+
+.nav-button:hover {
+    color: #da80ff;
+    font-size: 27px;
+    font-weight: 750;
+}
+
+@media (max-width: 800px) {
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .project-info {
+        align-items: center;
+        text-align: center;
+    }
+    .project-image-container {
+        width: 100%;
+    }
 }

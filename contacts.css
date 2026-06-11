@@ -28,7 +28,6 @@ body {
         background-position: 0% center;
     }
     100% {
-        /* Moving exactly 100% of the pattern width creates the seamless loop */
         background-position: 400% center;
     }
 }
@@ -53,14 +52,13 @@ p.about-me-name {
     font-size: 52px;
     font-weight: 700;
     background-image: linear-gradient(
-        to right,
-        #0038A8,
-        #D60270,
-        #9B4F96,
-        #0038A8
-        );
+    to right,
+        #0057b7,
+        #8d00ff,
+        #0057b7
+    );
     background-size: 400% auto;
-    animation: name-gradient 48s infinite linear;
+    animation: name-gradient 24s infinite linear;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
