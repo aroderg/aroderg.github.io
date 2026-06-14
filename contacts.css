@@ -65,22 +65,24 @@ p.about-me-name {
 }
 
 #all-contacts-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(25%, auto));
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: auto;
     height: auto;
     gap: 5vh;
 }
 
-.contacts-button {
+.contact-container {
     /*
     border-radius: 6px;
     border-color: #ffffff;
     border-style: solid;
     border-width: 2px;
     */
+    text-decoration: none;
     width: auto;
     height: auto;
     padding: 0px 10px 0px 10px;
@@ -91,8 +93,63 @@ p.about-me-name {
     transition-duration: 350ms;
 }
 
-.contacts-button:hover {
+.contact-button {
+    /*
+    border-radius: 6px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    */
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    padding: 0px 10px 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 36px;
+    font-weight: 450;
+    transition-duration: 350ms;
+}
+
+.contact-button:hover {
     color: #8988ff;
-    font-size: 39px;
+    font-weight: 750;
+}
+
+.contact-container:has(.contact-button:hover) {
+    transform: scale(1.06);
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.nav-button {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    padding: 0px 10px;
+    color: #ffffff;
+    font-family: "Afacad Flux", monospace;
+    font-size: 24px;
+    font-weight: 450;
+    transition-duration: 350ms;
+}
+
+.nav-button:hover {
+    color: #da80ff;
+    transform: scale(1.1);
     font-weight: 750;
 }
