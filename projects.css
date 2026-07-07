@@ -32,7 +32,6 @@ body {
         background-position: 0% center;
     }
     100% {
-        /* Moving exactly 100% of the pattern width creates the seamless loop */
         background-position: 400% center;
     }
 }
@@ -74,8 +73,7 @@ body {
     border-color: #ffffff;
     border-style: solid;
     border-width: 4px;
-    width: 100%;
-    max-width: 1000px;
+    width: 80%;
     padding: 20px;
     background-color: #00000080;
     backdrop-filter: blur(2px);
@@ -103,8 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 100%;
-    max-width: 1000px;
+    width: 80%;
 }
 
 .project-card {
