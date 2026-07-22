@@ -1,62 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap');
+
+:root {
+    --bg-overlay: rgba(0, 0, 0, 0.75);
+    --border-color: #ffffff;
+    --accent-purple: #da80ff;
+    --accent-blue: #8988ff;
+    --font-main: "Afacad Flux", monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #000000;
-    background-image: url(asset/background_marine.avif);
+    background-image: url('asset/background_marine.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
     background-attachment: fixed;
     image-rendering: pixelated;
-    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    color: #ffffff;
     display: flex;
-    height: 100vh;
-    width: 100vw;
     justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
 }
 
 #app {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
 }
 
 @keyframes name-gradient {
-    0% {
-        background-position: 0% center;
-    }
-    100% {
-        background-position: 400% center;
-    }
+    0% { background-position: 0% center; }
+    100% { background-position: 400% center; }
 }
 
 #name-container {
-    margin: 1vw 0vw 2vw 0vw;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    align-content: center;
+    margin-bottom: 2.5rem;
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(4px);
+    padding: 12px 28px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
 }
 
-p.about-me-name {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: "Afacad Flux", monospace;
-    font-size: 52px;
-    font-weight: 700;
-    background-image: linear-gradient(
-    to right,
-        #0057b7,
-        #8d00ff,
-        #0057b7
-    );
+.about-me-name {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #0057b7, #8d00ff, #0057b7);
     background-size: 400% auto;
     animation: name-gradient 24s infinite linear;
     -webkit-background-clip: text;
@@ -66,90 +67,77 @@ p.about-me-name {
 
 #all-contacts-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(25%, auto));
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    justify-items: center;
+}
+
+.contact-card {
+    text-decoration: none;
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 18px 24px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: auto;
-    gap: 5vh;
+    transition: all 250ms ease;
+    border-radius: 4px;
+    width: 100%;
 }
 
-.contact-container {
-    /*
-    border-radius: 6px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 2px;
-    */
-    text-decoration: none;
-    width: auto;
-    height: auto;
-    padding: 0px 10px 0px 10px;
+/* Centers the last item across both columns when there is an odd number of contacts */
+.contact-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 340px;
+}
+
+.contact-name {
     color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 36px;
-    font-weight: 450;
-    transition-duration: 350ms;
+    font-size: 28px;
+    font-weight: 500;
+    transition: color 250ms ease;
 }
 
-.contact-button {
-    /*
-    border-radius: 6px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 2px;
-    */
-    text-decoration: none;
-    width: auto;
-    height: auto;
-    padding: 0px 10px 0px 10px;
-    color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 36px;
-    font-weight: 450;
-    transition-duration: 350ms;
+.contact-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(137, 136, 255, 0.25);
 }
 
-.contact-button:hover {
-    color: #8988ff;
-    font-weight: 750;
-}
-
-.contact-container:has(.contact-button:hover) {
-    transform: scale(1.06);
+.contact-card:hover .contact-name {
+    color: var(--accent-blue);
+    font-weight: 700;
 }
 
 .navigation-bar {
     display: flex;
-    flex-direction: row;
-    align-content: center;
     justify-content: center;
-    width: auto;
-    height: auto;
-    padding: 0px 10px;
-    color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 50px;
 }
 
 .nav-button {
     text-decoration: none;
-    width: auto;
-    height: auto;
-    padding: 0px 10px;
     color: #ffffff;
-    font-family: "Afacad Flux", monospace;
     font-size: 24px;
-    font-weight: 450;
-    transition-duration: 350ms;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: all 300ms ease;
 }
 
 .nav-button:hover {
-    color: #da80ff;
-    transform: scale(1.1);
-    font-weight: 750;
+    color: var(--accent-purple);
+    transform: translateY(-2px) scale(1.05);
+}
+
+@media (max-width: 550px) {
+    #all-contacts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card:last-child:nth-child(odd) {
+        max-width: 100%;
+    }
 }

@@ -1,63 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap');
+
+:root {
+    --bg-overlay: rgba(0, 0, 0, 0.75);
+    --border-color: #ffffff;
+    --accent-purple: #da80ff;
+    --font-main: "Afacad Flux", monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #000000;
-    background-image: url(asset/background_pixel.avif);
+    background-image: url('asset/background_pixel.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
     background-attachment: fixed;
     image-rendering: pixelated;
-    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    color: #ffffff;
     display: flex;
-    height: 100vh;
-    width: 100vw;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 #app {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 @keyframes name-gradient {
-    0% {
-        background-position: 0% center;
-    }
-    100% {
-        /* Moving exactly 100% of the pattern width creates the seamless loop */
-        background-position: 400% center;
-    }
+    0% { background-position: 0% center; }
+    100% { background-position: 400% center; }
 }
 
 #name-container {
-    margin: 1vw 0vw 2vw 0vw;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
-    height: fit-content;
-    width: fit-content;
-    padding: 10px;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    align-content: center;
+    margin-bottom: 2rem;
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(4px);
+    padding: 12px 28px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
 }
 
-p.about-me-name {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: "Afacad Flux", monospace;
-    font-size: 52px;
-    font-weight: 700;
-    background-image: linear-gradient(
-    to right,
-        #0057b7,
-        #8d00ff,
-        #0057b7
-    );
+.about-me-name {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #0057b7, #8d00ff, #0057b7);
     background-size: 400% auto;
     animation: name-gradient 24s infinite linear;
     -webkit-background-clip: text;
@@ -66,82 +66,78 @@ p.about-me-name {
 }
 
 #about-me-boxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: left;
-    gap: 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
 }
 
-#left-about-me {
+.content-box {
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(4px);
+    border: 3px solid var(--border-color);
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    border-radius: 0px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 4px;
-    height: auto;
-    width: 42vw;
-    padding: 1vw;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
 }
 
-#right-about-me {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0px;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 4px;
-    height: auto;
-    width: 42vw;
-    padding: 1vw;
-    justify-content: flex-start;
-    background-color: #00000080;
-    backdrop-filter: blur(2px);
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 6px;
 }
 
 .about-me-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.about-me-description strong {
     color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 24px;
-    font-weight: 400;
-    margin: 0px;
+}
+
+.specs-list {
+    list-style: none;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.specs-list .label {
+    color: var(--accent-purple);
+    font-weight: 600;
 }
 
 .navigation-bar {
     display: flex;
-    flex-direction: row;
-    align-content: center;
     justify-content: center;
-    width: auto;
-    height: auto;
-    padding: 0px 10px;
     gap: 30px;
-    color: #ffffff;
-    font-family: "Afacad Flux", monospace;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 45px;
+    flex-wrap: wrap;
 }
 
 .nav-button {
     text-decoration: none;
-    width: auto;
-    height: auto;
-    padding: 0px 10px;
     color: #ffffff;
-    font-family: "Afacad Flux", monospace;
     font-size: 24px;
-    font-weight: 450;
-    transition-duration: 350ms;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: all 300ms ease;
+    display: inline-block;
 }
 
 .nav-button:hover {
-    color: #da80ff;
-    transform: scale(1.1);
-    font-weight: 750;
+    color: var(--accent-purple);
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 8px rgba(218, 128, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    #about-me-boxes {
+        grid-template-columns: 1fr;
+    }
 }
