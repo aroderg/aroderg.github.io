@@ -2,28 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="PfDhr2lCakthLvQaey_-54RxNdchAmBrq1a5jkdDxiU" />
-    <title>About me</title>
+    <title>aroderg — Developer & Game Designer</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="app">
-        <div id="name-container">
-            <p class="about-me-name">aroderg</p>
-        </div>
-        <div id="about-me-boxes">
-            <div id="left-about-me">
-                <p class="about-me-description">Hi, my name is Maksym. I was given a keyboard and internet access early in my childhood and ended up falling in love with coding, FPS games, idle games, and Minecraft. I use Lua, HTML+CSS+JS, and (sometimes) Python for my projects. I specialize in endless-loop idle games that turn your grind into a journey. Welcome to my little corner of the internet!</p>
-            </div>
-            <div id="right-about-me">
-                <p class="about-me-description" style="line-height: 160%">OS: Kubuntu 24.04<br>Main Languages: Lua, HTML+CSS+JS<br>Game Genre: Idle / Incremental<br>Tools: VSCode, Git<br>Current hyperfixation: Minecraft Datapacks</p>
-            </div>
-        </div>
-        <div class="navigation-bar">
-            <a href="/projects.html" class="nav-button">[ Projects ]</a>
-            <a href="/contacts.html" class="nav-button">[ Contacts ]</a>
-        </div>
+        <header id="name-container">
+            <h1 class="about-me-name">aroderg</h1>
+        </header>
+
+        <main id="about-me-boxes">
+            <section id="left-about-me" class="content-box">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-me-description">
+                    Hi, I'm <strong>Maksym</strong> (known online as <em>aroderg</em>). I'm a developer passionate about building engaging idle/incremental games, software tools, and custom Minecraft experiences. I focus on crafting loop mechanics that transform progression into a satisfying, long-term journey. Welcome to my piece of the internet!
+                </p>
+            </section>
+
+            <section id="right-about-me" class="content-box">
+                <h2 class="section-title">System Specs & Focus</h2>
+                <ul class="specs-list">
+                    <li><span class="label">OS:</span> Kubuntu 24.04 LTS</li>
+                    <li><span class="label">Primary Tech:</span> Lua, HTML / CSS / JS, Python</li>
+                    <li><span class="label">Primary Genre:</span> Idle & Incremental Strategy</li>
+                    <li><span class="label">Tooling:</span> VS Code, Git, LÖVE2D Framework</li>
+                    <li><span class="label">Current Focus:</span> Advanced Minecraft Datapacks & Systems</li>
+                </ul>
+            </section>
+        </main>
+
+        <nav class="navigation-bar">
+            <a href="projects.html" class="nav-button">[ Projects ]</a>
+            <a href="contacts.html" class="nav-button">[ Contacts ]</a>
+        </nav>
     </div>
 </body>
 </html>
