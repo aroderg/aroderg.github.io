@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap](https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..900&display=swap)');
 
 :root {
     --bg-overlay: rgba(0, 0, 0, 0.75);
@@ -112,6 +112,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
+.card-kptpona { border-color: #f59e0b; }
 .card-noxtd { border-color: #591adb; }
 .card-cooldown { border-color: #a8105d; }
 .card-noxos { border-color: #4285ca; }
@@ -130,12 +131,14 @@ body {
     border-width: 3px;
     display: block;
     transition: opacity 0.2s ease;
+    image-rendering: auto;
 }
 
 .project-image:hover {
     opacity: 0.9;
 }
 
+.border-kptpona { border-color: #f59e0b; }
 .border-noxtd { border-color: #591adb; }
 .border-cooldown { border-color: #a8105d; }
 .border-noxos { border-color: #4285ca; }
