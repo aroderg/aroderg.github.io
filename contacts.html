@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts & Links — aroderg</title>
     <link rel="stylesheet" href="contacts.css">
 </head>
+
 <body>
     <div id="app">
         <header id="name-container">
@@ -13,26 +15,58 @@
         </header>
 
         <main id="all-contacts-container">
+            <!-- Row 1 -->
             <a href="https://github.com/aroderg" target="_blank" rel="noopener" class="contact-card">
                 <span class="contact-name">GitHub</span>
             </a>
+            <a href="https://huggingface.co/aroderg" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-name">Hugging Face</span>
+            </a>
+            <a href="https://alpi.market/creators/aroderg" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-name">Alpi Market</span>
+            </a>
+
+            <!-- Row 2 -->
+            <a href="https://www.youtube.com/@aroderg" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-name">YouTube</span>
+            </a>
+            <div class="contact-dropdown">
+                <div class="contact-card dropdown-trigger" tabindex="0" role="button" aria-haspopup="true"
+                    aria-expanded="false" aria-label="Instagram options">
+                    <span class="contact-name">Instagram</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="https://www.instagram.com/karner.media" target="_blank" rel="noopener"
+                        class="dropdown-item" aria-label="karner.media (Professional profile)">
+                        <span class="dropdown-item-title">karner.media</span>
+                        <span class="dropdown-badge professional">Professional</span>
+                    </a>
+                    <a href="https://www.instagram.com/itz_aroderg" target="_blank" rel="noopener" class="dropdown-item"
+                        aria-label="itz_aroderg (Personal profile)">
+                        <span class="dropdown-item-title">itz_aroderg</span>
+                        <span class="dropdown-badge personal">Personal</span>
+                    </a>
+                </div>
+            </div>
             <a href="https://t.me/aroderg" target="_blank" rel="noopener" class="contact-card">
                 <span class="contact-name">Telegram</span>
             </a>
-            <a href="https://www.youtube.com/@aroderg" target="_blank" rel="noopener" class="contact-card">
-                <span class="contact-name">YouTube</span>
+
+            <!-- Row 3 -->
+            <a href="https://discord.gg/BxxvdS277B" target="_blank" rel="noopener" class="contact-card">
+                <span class="contact-name">Discord</span>
             </a>
             <a href="https://steamcommunity.com/id/aroderg/" target="_blank" rel="noopener" class="contact-card">
                 <span class="contact-name">Steam</span>
             </a>
-            <a href="https://discord.gg/BxxvdS277B" target="_blank" rel="noopener" class="contact-card">
-                <span class="contact-name">Discord</span>
-            </a>
-            <a href="https://www.roblox.com/users/10166865492/profile" target="_blank" rel="noopener" class="contact-card">
+            <a href="https://www.roblox.com/users/10166865492/profile" target="_blank" rel="noopener"
+                class="contact-card">
                 <span class="contact-name">Roblox</span>
-            </a>
-            <a href="https://www.instagram.com/itz_aroderg" target="_blank" rel="noopener" class="contact-card">
-                <span class="contact-name">Instagram</span>
             </a>
         </main>
 
@@ -40,5 +74,30 @@
             <a href="index.html" class="nav-button">[ Back to Home ]</a>
         </nav>
     </div>
+    <script>
+        const dropdown = document.querySelector('.contact-dropdown');
+        const trigger = dropdown?.querySelector('.dropdown-trigger');
+        if (dropdown && trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isOpen = dropdown.classList.toggle('is-open');
+                trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const isOpen = dropdown.classList.toggle('is-open');
+                    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
