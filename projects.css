@@ -13,9 +13,14 @@
     padding: 0;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #000000;
-    background-image: url('asset/background_obsidian.avif');
+    background-image: url('asset/background_bokeh.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +33,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 30px 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 #app {
@@ -39,8 +47,13 @@ body {
 }
 
 @keyframes name-gradient {
-    0% { background-position: 0% center; }
-    100% { background-position: 400% center; }
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 400% center;
+    }
 }
 
 #name-container {
@@ -112,11 +125,25 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
-.card-kptpona { border-color: #f59e0b; }
-.card-noxtd { border-color: #591adb; }
-.card-cooldown { border-color: #a8105d; }
-.card-noxos { border-color: #4285ca; }
-.card-dataincremental { border-color: #666666; }
+.card-kptpona {
+    border-color: #f59e0b;
+}
+
+.card-noxtd {
+    border-color: #591adb;
+}
+
+.card-cooldown {
+    border-color: #a8105d;
+}
+
+.card-noxos {
+    border-color: #4285ca;
+}
+
+.card-dataincremental {
+    border-color: #666666;
+}
 
 .project-image-container {
     flex: 0 0 300px;
@@ -138,11 +165,25 @@ body {
     opacity: 0.9;
 }
 
-.border-kptpona { border-color: #f59e0b; }
-.border-noxtd { border-color: #591adb; }
-.border-cooldown { border-color: #a8105d; }
-.border-noxos { border-color: #4285ca; }
-.border-dataincremental { border-color: #666666; }
+.border-kptpona {
+    border-color: #f59e0b;
+}
+
+.border-noxtd {
+    border-color: #591adb;
+}
+
+.border-cooldown {
+    border-color: #a8105d;
+}
+
+.border-noxos {
+    border-color: #4285ca;
+}
+
+.border-dataincremental {
+    border-color: #666666;
+}
 
 .project-info {
     flex: 1;
@@ -204,7 +245,7 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .project-image-container {
         flex: 1 1 auto;
         width: 100%;

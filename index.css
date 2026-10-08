@@ -15,7 +15,7 @@
 
 body {
     background-color: #000000;
-    background-image: url('asset/background_pixel.avif');
+    background-image: url('asset/background_laser.avif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,8 +40,13 @@ body {
 }
 
 @keyframes name-gradient {
-    0% { background-position: 0% center; }
-    100% { background-position: 400% center; }
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 400% center;
+    }
 }
 
 #name-container {
