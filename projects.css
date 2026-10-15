@@ -125,6 +125,10 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
+.card-strawble {
+    border-color: #f43f5e;
+}
+
 .card-kptpona {
     border-color: #f59e0b;
 }
@@ -163,6 +167,10 @@ body {
 
 .project-image:hover {
     opacity: 0.9;
+}
+
+.border-strawble {
+    border-color: #f43f5e;
 }
 
 .border-kptpona {
